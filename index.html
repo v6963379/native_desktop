@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native Desktop App</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="container mx-auto">
+      <!-- Создаем флекс-контейнер для двух колонок -->
+      <div class="flex gap-6">
+        <!-- Левая колонка -->
+        <div class="w-1/2">
+          <h1 class="text-2xl font-bold mb-4">
+            Тестирование действий пользователя
+          </h1>
+
+          <!-- Область для тестирования -->
+          <div
+            id="testArea"
+            class="bg-white rounded-lg shadow-md p-8 mb-6 h-64 overflow-hidden">
+            <p class="text-gray-600">
+              Область для тестирования действий пользователя
+            </p>
+            <p class="text-sm text-gray-500 mt-2">
+              Попробуйте различные действия: клики, движения мыши, скроллинг
+            </p>
+          </div>
+
+          <!-- Окно логов -->
+          <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Логи действий:</h2>
+            <div
+              id="log"
+              class="bg-white rounded-lg shadow-md p-4 h-64 overflow-y-auto font-mono text-sm"></div>
+          </div>
+
+          <!-- Кнопки управления -->
+          <div class="flex gap-4">
+            <button
+              id="downloadReport"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+              Загрузить отчет JSON
+            </button>
+            <button
+              id="showReport"
+              class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+              Показать отчет
+            </button>
+            <button
+              id="clearData"
+              class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+              Очистить данные
+            </button>
+          </div>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="w-1/2">
+          <div id="reportSection">
+            <h2 class="text-2xl font-bold mb-4">Сводный отчет</h2>
+            <div
+              id="reportContent"
+              class="bg-white rounded-lg shadow-md p-6 min-h-[200px]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
